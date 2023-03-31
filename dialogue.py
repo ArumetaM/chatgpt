@@ -16,6 +16,19 @@ else:
     system_setting = input()
     if system_setting != "":
         dialogue_message.append({"role": "system","content": system_setting})
+
+flag=True
+
+while flag:
+    print("モデルを選択してください。3.5を入力するとGPT-3.5,4を入力するとGPT-4を使用します。")
+    input_model = input()
+    if input_model == "3.5":
+        model = "gpt-3.5-turbo"
+        flag=False
+    elif input_model == "4":
+        model = "gpt-4"
+        flag=False
+
 flag=True
 print("質問を入力してください")
 while flag:
